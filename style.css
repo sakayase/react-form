@@ -4,23 +4,25 @@
     width: 400px;
 }
 
-input {
+input, textarea {
     margin-bottom: 10px;
 }
 
-.input-message {
-    height: 200px;
+.input-name {
+    height: 2rem;
+}
+
+.input-message, .input-name {
+    border-radius: 5px;
+    border-color: lightgray;
 }
 
 .input-submit {
     background-color: deepskyblue;
     color: white;
     border: none;
-    width: 20%;
-    height: 1.5rem;
+    width: 35%;
+    height: 2rem;
+    font-size: 1.5rem;
     border-radius: 5px;
-}
-
-.input-submit::after {
-    content:'>'
 }

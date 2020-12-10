@@ -1,6 +1,4 @@
 class App extends React.Component {
-
-
     state = {
         name: "",
         message: "",
@@ -8,7 +6,6 @@ class App extends React.Component {
     }
 
     handleNameChange = (event) => {
-        console.log(event.target.value);
         this.setState({
             name: event.target.value
         })
@@ -18,12 +15,10 @@ class App extends React.Component {
         this.setState({
             message: event.target.value
         })
-        console.log(this.state.message)
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.name)
         const allInput = {
             name: this.state.name,
             message: this.state.message,
@@ -31,23 +26,23 @@ class App extends React.Component {
         this.setState({
             posts: this.state.posts.concat(allInput)
         })
-        console.log(this.state.posts);
+
     }
+
     render(){
         return (
             <form className="form" onSubmit={this.handleSubmit}>
                 <h2 className="form-title">Say something</h2>
-                <input className="input-name" id="inputName" type="text" 
+                <input className="input-name" id="inputName" type="text" placeholder="Your Name"
                 onChange={this.handleNameChange}  
                 />
-                <input className="input-message" id="inputMessage" type="textarea" 
+                <textarea className="input-message" id="inputMessage" rows="5" placeholder="Your comment"
                 onChange={this.handleMessageChange}
                 />       
-                <input className="input-submit" type="submit" value="submit"/>        
+                <input className="input-submit" type="submit" value="Envoyer"/>        
             </form>
         )
         
     }
 }
-
 ReactDOM.render(<App/>, document.getElementById('app'));
