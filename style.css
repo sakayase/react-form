@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.input-message {
+    height: 200px;
+}
+
+.input-submit {
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    width: 20%;
+    height: 1.5rem;
+    border-radius: 5px;
+}
+
+.input-submit::after {
+    content:'>'
+}
